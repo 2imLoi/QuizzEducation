@@ -1,4 +1,5 @@
 package com.vnpt.quizz_education_be.RestController;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -15,15 +16,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vnpt.quizz_education_be.DAO.BoCauHoiDaLamDAO;
-import com.vnpt.quizz_education_be.DAO.CauHoiDAO;
 import com.vnpt.quizz_education_be.Entity.BoCauHoiDaLam;
-import com.vnpt.quizz_education_be.Entity.CauHoi;
-
 
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping("/quizzeducation/api")
 public class BoCauHoiDaLamRestController {
+
     @Autowired
     BoCauHoiDaLamDAO boCauHoiDaLamDAO;
 
@@ -32,7 +31,6 @@ public class BoCauHoiDaLamRestController {
         return ResponseEntity.ok(boCauHoiDaLamDAO.findAll());
     }
 
-    
     // Get 1 đối tượng thông qua id
     @GetMapping("bocauhoidalam/{id}")
     public ResponseEntity<BoCauHoiDaLam> findById(@PathVariable("id") Integer maBoCauHoiDaLam) {
@@ -54,7 +52,8 @@ public class BoCauHoiDaLamRestController {
     }
 
     @PutMapping("bocauhoidalam/{id}")
-    public ResponseEntity<BoCauHoiDaLam> put(@PathVariable("id") Integer maBoCauHoiDaLam, @RequestBody BoCauHoiDaLam bocauhoidalam) {
+    public ResponseEntity<BoCauHoiDaLam> put(@PathVariable("id") Integer maBoCauHoiDaLam,
+            @RequestBody BoCauHoiDaLam bocauhoidalam) {
         if (!boCauHoiDaLamDAO.existsById(maBoCauHoiDaLam)) {
             return ResponseEntity.notFound().build();
         }

@@ -9,6 +9,6 @@ import com.vnpt.quizz_education_be.Entity.KyThi;
 
 import java.util.List;
 
-public interface KiThiDAO extends JpaRepository<KyThi, Integer> {
+public interface KyThiDAO extends JpaRepository<KyThi, Integer> {
 
 }

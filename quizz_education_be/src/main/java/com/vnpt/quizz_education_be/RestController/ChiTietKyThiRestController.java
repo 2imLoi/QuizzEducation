@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vnpt.quizz_education_be.DAO.ChiTietKiThiDAO;
+import com.vnpt.quizz_education_be.DAO.ChiTietKyThiDAO;
 import com.vnpt.quizz_education_be.Entity.ChiTietKyThi;
 
 @RestController
@@ -23,7 +23,7 @@ import com.vnpt.quizz_education_be.Entity.ChiTietKyThi;
 @RequestMapping("/quizzeducation/api")
 public class ChiTietKyThiRestController {
     @Autowired
-    ChiTietKiThiDAO chiTietKyThiDAO;
+    ChiTietKyThiDAO chiTietKyThiDAO;
 
     @GetMapping("chitietkythi")
     public ResponseEntity<List<ChiTietKyThi>> findAll() {

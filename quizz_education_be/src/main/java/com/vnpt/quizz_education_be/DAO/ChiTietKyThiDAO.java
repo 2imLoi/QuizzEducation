@@ -9,6 +9,6 @@ import com.vnpt.quizz_education_be.Entity.ChiTietKyThi;
 
 import java.util.List;
 
-public interface ChiTietKiThiDAO extends JpaRepository<ChiTietKyThi, Integer> {
+public interface ChiTietKyThiDAO extends JpaRepository<ChiTietKyThi, Integer> {
 
 }
